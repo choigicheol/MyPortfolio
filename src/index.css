@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'ChungbukNationalUniversity';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/ChungbukNationalUniversity-Regular.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChungbukNationalUniversity';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/ChungbukNationalUniversity-Bold.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+  font-family: "ChungbukNationalUniversity";
+  font-weight: 100;
+}
+
 body {
   width: 100%;
   margin : 0;
