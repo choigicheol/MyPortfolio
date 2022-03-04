@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
     width: 100vw;
     height: 100%;
   }
-  #Header_Img_Background {
+  #Header_img_background {
     width: 100%;
     height: 100%;
     opacity: 0.3;
@@ -17,9 +17,11 @@ export const HeaderContainer = styled.div`
     position: relative;
     z-index: 1;
   }
-  #header_Menu {
+  #header_menu {
     width: 100%;
     position: fixed;
+    height: 25px;
+    line-height: 25px;
     z-index: 999;
     top: 0;
     text-align: right;
@@ -27,9 +29,18 @@ export const HeaderContainer = styled.div`
     background-color: #ffffff;
     span {
       margin-right: 30px;
-      color: #222222;
+      color: #2d2d2d;
       font-size: 1.5rem;
       font-weight: 300;
+      cursor: pointer;
+      @media screen and (max-width: 700px) {
+        font-size: 1rem;
+        margin-right: 25px;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 0.8rem;
+        margin-right: 10px;
+      }
     }
   }
 `;
