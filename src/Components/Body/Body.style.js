@@ -2,15 +2,17 @@ import styled from "styled-components";
 
 export const BodyContainer = styled.div`
   width: 100%;
-  position: relative;
   background-color: #f8fcff;
   .blank_area {
     width: 100%;
     height: 65px;
     background-color: #ffffff;
   }
-  .blank_skill {
+  .background_skyblue {
     background-color: #f8fcff;
+  }
+  .background_white {
+    background-color: #ffffff;
   }
 `;
 
@@ -19,14 +21,41 @@ export const IntroBox = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 45vh;
-    height: 100%;
+    height: 97vh;
+    /* height: 435px; */
     font-size: 1.5rem;
     font-weight: 300;
+  }
+  #header_img_container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+  }
+  img {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+  #Header_img_background {
+    width: 100%;
+    height: 450px;
+    opacity: 0.3;
+    background-color: #d8d4cc;
+    position: absolute;
+    z-index: 2;
+  }
+  .intro_content{
+    width: 100%;
+    text-align: center;
+    div{
+      padding : 5px 0;
+    }
   }
   `;
 
 export const SubTitle = styled.div`
+  /* margin-top: 450px; */
   width: 100%;
   text-align: center;
   padding: 40px 0 20px 0;
@@ -46,29 +75,31 @@ export const SubTitle = styled.div`
 `;
 
 export const SkillsBox = styled.div`
+  /* max-width: 1280px; */
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 97vh;
   background-color: #ffffff;
   /* padding-bottom: 65px; */
   #skills_container {
+    max-width: 1080px;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    justify-items: center;
+    margin-top: 50px;
     .skill_box {
       border: 1px solid #2d2d2d;
       height: fit-content;
-      margin: 22.5px 10px;
       .skill_title {
-        width: 100%;
         text-align: center;
         font-size: 2rem;
         font-weight: 300;
         padding: 20px 0;
         border-bottom: 1px dashed #2d2d2d;
-        span {
-          /* border-bottom: 1px solid #8f8f8f; */
-        }
         @media screen and (max-width: 700px) {
           font-size: 1.5rem;
           padding: 15px 0;
@@ -94,8 +125,8 @@ export const ProjectsBox = styled.div`
   width: 100%;
   min-height: 97vh;
   #project_container {
-    border-top: 1px solid #2d2d2d;
-    margin-bottom: 70px;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 80px;
   }
   .project {
     width: 100%;
@@ -107,7 +138,7 @@ export const ProjectsBox = styled.div`
   .project_title {
     font-size: 1.6rem;
     font-weight: 300;
-    margin-top: 50px;
+    margin-top: 40px;
   }
   .project_link {
     margin: 0 10px;

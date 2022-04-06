@@ -2,21 +2,7 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
   width: 100%;
-  height: 55vh;
-  img {
-    top: -210px;
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-  }
-  #Header_img_background {
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    background-color: #d8d4cc;
-    position: relative;
-    z-index: 1;
-  }
+
   #header_menu {
     width: 100%;
     position: fixed;

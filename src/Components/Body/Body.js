@@ -10,30 +10,34 @@ import {
 import { skillsData, projectData } from "../../Data/Data";
 import Project from "../Project/Project";
 
-// const Body = forwardRef((props,ref)=>{
-//   return <div></div>
-// })
-
 const Body = forwardRef((props, ref) => {
   return (
     <BodyContainer>
       <IntroBox>
+        <div id="header_img_container">
+          <div id="Header_img_background"></div>
+          <img src="./justDoIt.png" alt="main_image" />
+        </div>
         <SubTitle>
           <span>INTRO</span>
         </SubTitle>
-        <p>
-          안녕하세요
-          <br />
-          테스트용 텍스트입니다 <br />
-          이러저러한 사람의 개발자입니다.
+        <p className="intro_content">
+          <div>안녕하세요</div>
+          <div>기능구현 알고리즘에 대해 고민하는것을 좋아하고</div>
+          <div>사람들과 기술에 대한 대화를 나누며</div>
+          <div>새로운것을 알아가는데 </div>
+          <div>흥미를 느끼는 개발자입니다.</div>
         </p>
-        <p>
-          코드스테이츠 SEB 31기 / 2021.06~2021.11 <br />
-          코드스테이츠 프론트엔드 심화반 / 2021.11 ~ 2022.01
+        <p className="intro_content">
+          <div>코드스테이츠 SEB 31기 / 2021.06~2022.01</div>
+          {/* <div>코드스테이츠 프론트엔드 심화반 / 2021.11 ~ 2022.01</div> */}
         </p>
       </IntroBox>
       <SkillsBox>
-        <div className="blank_area blank_skill" ref={ref.skillsRef}></div>
+        <div
+          className="blank_area background_skyblue"
+          ref={ref.skillsRef}
+        ></div>
         <SubTitle>
           <span>SKILLS</span>
         </SubTitle>
@@ -101,7 +105,7 @@ const Body = forwardRef((props, ref) => {
           );
         })}
       </ProjectsBox>
-      <ContactBox>
+      <ContactBox className="background_white">
         <SubTitle>
           <span>CONTACT</span>
         </SubTitle>
